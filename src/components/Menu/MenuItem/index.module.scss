@@ -1,0 +1,31 @@
+.menuItem {
+	display: flex;
+	align-items: center;
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+	.menuItemIcon {
+		width: 30px;
+		height: 30px;
+		@media (max-width: 1368px) {
+			width: 20px;
+			height: 20px;
+		}
+	}
+	img {
+		object-fit: fill;
+		@media (max-width: 1368px) {
+			width: 20px;
+			height: 20px;
+		}
+	}
+	span {
+		font-family: Tajawal-Regular;
+		font-size: 36px;
+		@media (max-width: 1368px) {
+			font-size: 20px;
+		}
+		white-space: nowrap;
+	}
+}

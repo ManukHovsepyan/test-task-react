@@ -1,0 +1,13 @@
+.app {
+  display: flex;
+  justify-content: space-between;
+}
+.main-content {
+  position: relative;
+  left: 120px;
+  width: calc(100% - 120px);
+  @media (max-width: 1368px) {
+    left: 80px;
+    width: calc(100% - 80px);
+  }
+}

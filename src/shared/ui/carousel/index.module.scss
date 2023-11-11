@@ -1,0 +1,23 @@
+.owlBody {
+	max-width: calc(100% - 100px);
+	overflow: hidden;
+}
+.swipper {
+	width: 100%;
+}
+
+.owlTitle {
+	font-size: 30px;
+	color: #F1F1F1;
+}
+.swiperSlide {
+	// width: 200px;
+	// height: 296px;
+	user-select: none;
+}
+
+.swiperImage {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}

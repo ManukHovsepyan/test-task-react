@@ -1,0 +1,109 @@
+.sidebar {
+  width: 120px;
+  height: 100%;
+  color: white;
+  transition: width 0.2s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  .menu {
+    ul {
+      list-style-type: none;
+      li {
+        position: relative;
+        margin: 20px 0;
+        padding: 15px;
+        box-sizing: border-box;
+        transition: .2s color;
+        span {
+          position: absolute;
+          left: 80px;
+          top: 50%;
+          transform: translateY(-50%);
+          opacity: 0;
+          visibility: hidden;
+          transition: .2 all ease 0s;
+        }
+        &:hover {
+          background-color: #3B486D;
+          border-radius: 10px;
+        }
+        @media (max-width: 1368px) {
+          margin: 0;
+          padding: 10px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1368px) {
+    width: 80px;
+  }
+}
+.sidebarBody {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1111;
+  padding: 60px 30px;
+  background: #040404;
+  @media (max-width: 1368px) {
+    padding: 20px;
+  }
+}
+.sidebarBG {
+  background: linear-gradient(0.25turn, #040404, transparent);
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  transition: .5s all ease 0s;
+  z-index: 1110;
+  &._opened {
+    width: 100vw;
+    animation: gradientAnimation .5s forwards;
+  }
+  @media (max-width: 1368px) {
+    width: 80px;
+  }
+}
+.sidebar.open {
+  z-index: 999;
+  width: 350px;
+  @media (max-width: 1368px) {
+    width: 250px;
+  }
+  ul {
+    li {
+      span {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.userInfo {
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s all ease 0s;
+  &._opened {
+    opacity: 1;
+    visibility: visible;
+  }
+  @media (max-width: 1368px) {
+    padding-top: 20px;
+  }
+}
+
+@keyframes gradientAnimation {
+  from {
+    background: linear-gradient(0.25turn, #040404, transparent);
+  }
+  to {
+    background: linear-gradient(0.25turn, #040404, transparent);
+  }
+}
